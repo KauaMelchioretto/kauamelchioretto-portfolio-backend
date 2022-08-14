@@ -42,7 +42,7 @@ router.post("/contact", (request, response) => {
   const { phone } = request.body;
   const mail = {
     from: name,
-    to: "kauamelchoretto@gmail.com",
+    to: "kauamelchioretto@outlook.com",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name} </p>
         <p>Email: ${email} </p>
