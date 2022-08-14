@@ -14,7 +14,7 @@ app.listen(process.env.PORT || 3001, () => {
 
 const contactEmail = nodemailer.createTransport({
   host: "smtp.live.com",
-  secure: true,
+  secure: false,
   port: 465,
   auth: {
     user: process.env.EMAIL_USER,
