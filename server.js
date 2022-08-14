@@ -14,6 +14,7 @@ app.listen(process.env.PORT || 3001, () => {
 
 const contactEmail = nodemailer.createTransport({
     service: "hotmail",
+    secure: true,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
