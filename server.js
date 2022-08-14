@@ -13,10 +13,12 @@ app.listen(process.env.PORT || 3001, () => {
   });
 
 const contactEmail = nodemailer.createTransport({
-    service: "outlook",
+    host: "outlook.office365.com",
+    port: 587,
+    secure: true,
     auth: {
-        user: "kauamelchioretto@outlook.com",
-        pass: "Sandro123",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
@@ -47,7 +49,7 @@ router.post("/contact", (request, response) => {
         if (error){
             response.send(error);
         } else {
-            response.send({code: 200, status: "Message Sent"}, process.env.EMAIL_USER, process.env.EMAIL_PASS);
+            response.send({code: 200, status: "Message Sent"});
         }
     });
 });
