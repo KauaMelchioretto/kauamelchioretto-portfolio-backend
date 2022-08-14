@@ -13,9 +13,12 @@ app.listen(process.env.PORT || 3001, () => {
   });
 
 const contactEmail = nodemailer.createTransport({
-    host: "SMPT.office365.com",
+    host: "smtp-mail.outlook.com",
+    secure: false,
     port: 587,
-    secure: true,
+    tls: {
+        ciphers: 'SSLv3'
+    },
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
