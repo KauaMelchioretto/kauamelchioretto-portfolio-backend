@@ -11,6 +11,8 @@ app.use("/", router);
 app.listen(process.env.PORT || 3001, () => {
   console.log(`Server running in port ${process.env.PORT}`);
 });
+console.log(process.env.EMAIL);
+console.log(process.env.PASS);
 
 const contactEmail = nodemailer.createTransport({
   host: "smtp-mail.outlook.com",
