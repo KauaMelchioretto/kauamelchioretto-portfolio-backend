@@ -14,6 +14,7 @@ app.listen(process.env.PORT || 3001, () => {
 
 const contactEmail = nodemailer.createTransport({
     service: "outlook",
+    port: 587,
     secure: true,
     auth: {
         user: process.env.EMAIL_USER,
