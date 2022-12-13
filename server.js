@@ -13,16 +13,13 @@ app.listen(process.env.PORT || 3001, () => {
 });
 
 const contactEmail = nodemailer.createTransport({
-  host: 'smtp-mail.outlook.com',
-  secure: false,
-  port: 587,
+  host: 'smtp.zoho.com',
+  secure: true,
+  port: 465,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
-  tls: {
-    ciphers: 'SSLv3'
-  }
 });
 
 contactEmail.verify((error) => {
