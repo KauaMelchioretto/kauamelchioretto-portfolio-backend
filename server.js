@@ -13,6 +13,7 @@ app.listen(process.env.PORT || 3001, () => {
 });
 
 const contactEmail = nodemailer.createTransport({
+  service: "Zoho",
   host: 'smtp.zoho.com',
   secure: true,
   port: 465,
@@ -36,7 +37,7 @@ router.post("/contact", (request, response) => {
   const { message } = request.body;
   const { phone } = request.body;
   const mail = {
-    from: name,
+    from: email,
     to: "kauamelchioretto@outlook.com",
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name} </p>
