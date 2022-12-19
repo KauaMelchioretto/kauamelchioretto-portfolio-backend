@@ -29,7 +29,7 @@ contactEmail.verify((error) => {
   if (error) {
     console.log("Error: " + error);
   } else {
-    console.log("Ready to Send.");
+    console.log("Ready to Send");
   }
 });
 
