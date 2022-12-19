@@ -14,7 +14,6 @@ app.listen(process.env.PORT || 3001, () => {
   console.log(`Server running in port ${process.env.PORT}`);
 });
 
-console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS);
 const contactEmail = nodemailer.createTransport({
   service: "Zoho",
   host: 'smtp.zoho.com',
