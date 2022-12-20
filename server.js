@@ -7,7 +7,7 @@ var dotenv = require('dotenv').config;
 // server used to send the emails
 const app = express();
 dotenv.apply();
-app.use(cors({credentials: false, origin:'https://kauamelchioretto-portfolio.onrender.com/'}));
+app.use(cors({origin:'https://kauamelchioretto-portfolio.onrender.com'}));
 app.use(express.json());
 app.use("/", router);
 app.listen(process.env.PORT || 3001, () => {
